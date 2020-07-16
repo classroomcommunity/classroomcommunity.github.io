@@ -6,7 +6,7 @@
 var url = 'https://raw.githubusercontent.com/classroomcommunity/classroomcommunity.github.io/master/test.json';
 $(document).ready(function(){
   $("button").click(function(){
-    $.getJSON(url, function(result){
+    $.getJSON('./test.json', function(result){
       $.each(result, function(i, field){
         $("div").append(field + " ");
       });
