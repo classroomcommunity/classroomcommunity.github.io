@@ -12,11 +12,11 @@
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-      var staticUrl = 'https://raw.githubusercontent.com/classroomcommunity/classroomcommunity.github.io/master/test.json';
-      $.getJSON(staticUrl, function(data) {
-        console.log("This is an example of a static JSON file being served by a web server.")
-        console.log(data);
-      });
+    var dynamicUrl = 'https://raw.githubusercontent.com/classroomcommunity/classroomcommunity.github.io/master/test.json';
+    $.getJSON(dynamicUrl, function(data) {
+    console.log("This is an example of a dynamic JSON file being served by a web server.")
+    console.log(data);
+    });
   </script>
 </head>
 <body>
