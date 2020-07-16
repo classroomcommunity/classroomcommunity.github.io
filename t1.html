@@ -12,16 +12,14 @@
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-    function myFunction(){
       var staticUrl = 'https://raw.githubusercontent.com/classroomcommunity/classroomcommunity.github.io/master/test.json';
       $.getJSON(staticUrl, function(data) {
         console.log("This is an example of a static JSON file being served by a web server.")
         console.log(data);
       });
-    }
   </script>
 </head>
-<body onload="myFunction()">
+<body>
 <h1>Test Page 1</h1>
 </body>
 </html>
