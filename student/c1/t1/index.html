@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <title>CS101 - Robert Smith</title>
+  <style>
+    .wrapper{
+      width: 98vw;
+      height: 95vh;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .leftWrapper{
+      width: 18vw;
+      height: 95vh;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-family: 'Roboto Slab', serif;
+      font-style: normal;
+      font-weight: normal;
+      align-content: flex-start;
+    }
+    .rightWrapper{
+      width: 100%;
+      height: 95vh;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-family: 'Roboto Slab', serif;
+      font-style: normal;
+      font-weight: normal;
+      align-content: flex-start;
+    }
+    .threadBox{
+      width: 14vw;
+      height: 15vh;
+      background: rgba(239, 194, 188, 0.8);
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      margin: 2vh;
+      padding: 10px;
+    }
+    .backButton{
+      width: 7vw;
+      height: 7vh;
+      background: #C4C4C4;
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      margin: 2vh;
+      text-align: center;
+    }
+    a:link, a:visited{
+      text-decoration: none;
+      color: black;
+      font-size: 4vh;
+    }
+    img{
+      width: 15vh;
+      height: 15vh;
+      border-radius: 16px;
+    }
+    .topWrapper{
+      width: 79vw;
+      height: 6vh;
+      display: flex;
+      justify-content: center;
+      padding-top: 2vh;
+    }
+    .indivWrapper{
+      width: 100%;
+      height: 25vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+    .arrows{
+      width: 4vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: center;
+      margin: 5px;
+      font-size: 4vh;
+      overflow-x: ;
+    }
+    .arrowUp{
+      width: 0;
+      height: 0;
+      border-left: 2vh solid transparent;
+      border-right: 2vh solid transparent;
+      border-bottom: 4vh solid black;
+    }
+    .arrowDown{
+      width: 0;
+      height: 0;
+      border-left: 2vh solid transparent;
+      border-right: 2vh solid transparent;
+      border-top: 4vh solid black;
+    }
+    .question{
+      width: 60vw;
+      height: 18vh;
+      background: #FFDAB9;
+      border-radius: 24px;
+      padding: 20px;
+      font-size: 4vh;
+      line-height: normal;
+    }
+    input[type=submit]{
+      background-color: white;
+      border-radius: 6px;
+    }
+    input[type=submit]:hover{
+      background-color: #bfbfbf;
+    }
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    function upvote(item){
+      var arrow = $(item).attr("id");
+      document.getElementById(arrow).style.borderBottom="4vh solid blue";
+      var split = arrow.split("arrowUp");
+      var otherArrow = "arrowDown" + split[1];
+      document.getElementById(otherArrow).style.borderTop="4vh solid black";
+    }
+    function downvote(item){
+      var arrow = $(item).attr("id");
+      document.getElementById(arrow).style.borderTop="4vh solid blue";
+      var split = arrow.split("arrowDown");
+      var otherArrow = "arrowUp" + split[1];
+      document.getElementById(otherArrow).style.borderBottom="4vh solid black";
+    }
+    function newQ(){
+      let parent = document.getElementById("questionDiv");
+      let qbox = document.getElementById("newQ");
+      document.getElementById("newQButton").style.display="none";
+      var question = qbox.value;
+      qbox.style.display="none";
+      let html = "<span style='font-size: 4vh;'>" + question + "</span>";
+      parent.innerHTML+= html;
+    }
+  </script>
+</head>
+<body>
+  <div class = "wrapper">
+    <div class = "leftWrapper">
+      <a href="../"><div class = "backButton">Back</div></a>
+    </div>
+    <div class = "rightWrapper">
+      <div class="topWrapper"><span style="font-size: 4vh;">CS101 - Robert Smith - Lesson 1</span></div>
+      <div class="indivWrapper">
+        <div class="question" style="width: 69vw;">
+          <span style="font-size: 2vh;">Loren Stephenson</span></br>
+          <span> In JavaScript, how do you declare a variable? </span>
+        </div>
+      </div>
+      <div class="indivWrapper">
+        <img src="../../../pics/img2.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp1" onclick="upvote(this);"></div>
+          <span>4</span>
+          <div class = "arrowDown" id="arrowDown1" onclick="downvote(this);"></div>
+        </div>
+        <div class="question">
+          <span style="font-size: 2vh;">John Carlson</span></br>
+          <span> I think you can declare it with "var = ;" or "let = ;" </span>
+        </div>
+      </div>
 
+      <div class="indivWrapper">
+        <img src="../../../pics/img1.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp2" onclick="upvote(this);"></div>
+          <span>6</span>
+          <div class = "arrowDown" id="arrowDown2" onclick="downvote(this);"></div>
+        </div>
+        <div class="question">
+          <span style="font-size: 2vh;">Loren Stephenson</span></br>
+          <span> Thank You! I also found out const is for constant variables. </span>
+        </div>
+      </div>
+
+      <div class="indivWrapper">
+        <img src="../../../pics/img2.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp3" onclick="upvote(this);"></div>
+          <span>0</span>
+          <div class = "arrowDown" id="arrowDown3" onclick="downvote(this);"></div>
+        </div>
+        <div class="question" id ="questionDiv">
+          <span style="font-size: 2vh;">John Carlson</span></br>
+          <textarea id="newQ" rows="3" cols="100"></textarea> </br>
+          <button id="newQButton" onclick="newQ();">Add Response</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
