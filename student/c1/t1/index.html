@@ -103,7 +103,16 @@
     .question{
       width: 60vw;
       height: 18vh;
-      background: #FFDAB9;
+      background: #FFE1E1;
+      border-radius: 24px;
+      padding: 20px;
+      font-size: 4vh;
+      line-height: normal;
+    }
+    .response{
+      width: 60vw;
+      height: 18vh;
+      background: #C4C4C4;
       border-radius: 24px;
       padding: 20px;
       font-size: 4vh;
@@ -164,7 +173,7 @@
           <span>4</span>
           <div class = "arrowDown" id="arrowDown1" onclick="downvote(this);"></div>
         </div>
-        <div class="question">
+        <div class="response">
           <span style="font-size: 2vh;">John Carlson</span></br>
           <span> I think you can declare it with "var = ;" or "let = ;" </span>
         </div>
@@ -177,7 +186,7 @@
           <span>6</span>
           <div class = "arrowDown" id="arrowDown2" onclick="downvote(this);"></div>
         </div>
-        <div class="question">
+        <div class="response">
           <span style="font-size: 2vh;">Loren Stephenson</span></br>
           <span> Thank You! I also found out const is for constant variables. </span>
         </div>
@@ -190,7 +199,7 @@
           <span>0</span>
           <div class = "arrowDown" id="arrowDown3" onclick="downvote(this);"></div>
         </div>
-        <div class="question" id ="questionDiv">
+        <div class="response" id ="questionDiv">
           <span style="font-size: 2vh;">John Carlson</span></br>
           <textarea id="newQ" rows="3" cols="100"></textarea> </br>
           <button id="newQButton" onclick="newQ();">Add Response</button>
