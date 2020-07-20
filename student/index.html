@@ -1,1 +1,125 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <title>Student Dashboard</title>
+  <style>
+    .wrapper{
+      width: 98vw;
+      height: 95vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-family: 'Roboto Slab', serif;
+      font-style: normal;
+      font-weight: normal;
+      align-content: flex-start;
+    }
+    .innerWrapper{
+      width: 78vw;
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+    .topWrapper{
+      width: 97vw;
+      height: 25px;
+      display: flex;
+      font-size: 20px;
+      justify-content: flex-end;
+    }
+    .classContainer{
+      width: 78vw;
+      border: 2px solid #000000;
+      box-sizing: border-box;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-evenly;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .classInfo{
+      width: 35vw;
+      height: 150px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .innerClass{
+      height: 50%;
+      width: 40%;
+      font size: 20px;
+    }
+    a:link{
+      text-decoration: none;
+      color: black;
+    }
+    a:visited{
+      text-decoration: none;
+      color: black;
+    }
+    #class div:nth-of-type(1){
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: 'Roboto Slab', serif;
+      font-style: normal;
+    }
+    #class div:nth-of-type(2){
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 20px;
+      font-family: 'Roboto Slab', serif;
+      font-style: normal;
+    }
+    #class div:nth-of-type(3){
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 20px;
+      font-family: 'Roboto Slab', serif;
+      font-style: normal;
+    }
+  </style>
+  <script>
+  </script>
+</head>
+<body>
+  <div class = "wrapper">
+    <div class="topWrapper">
+      <span>Student Dashboard</span>
+    </div>
+    <div class="innerWrapper">
+      <span style="font-size: 40px">Hello, John</span>
+      <div class="classContainer">
+        <a href="./c1"><div class="classInfo" id="class" style="background: #FAD3D3;">
+          <div class="innerClass">CS 101</div> <div class="innerClass">SECTION 103</div>
+          <div class="innerClass">Dr. Robert Smith</div> <div class="innerClass"></div>
+        </div></a>
+        <a href="./c2"><div class="classInfo" id="class" style="background: #F9F1AB;">
+          <div class="innerClass">Math 131</div> <div class="innerClass">SECTION 301</div>
+          <div class="innerClass">Dr. Mariana Miller</div> <div class="innerClass"></div>
+        </div></a>
+        <a href="./c3"><div class="classInfo" id="class" style="background: #A8FAFF;">
+          <div class="innerClass">CS 479</div> <div class="innerClass">SECTION 115</div>
+          <div class="innerClass">Dr. Robert Smith</div> <div class="innerClass"></div>
+        </div></a>
+        <a href="./c4"><div class="classInfo" id="class" style="background: #E4D3FA;">
+          <div class="innerClass">BIO 203</div> <div class="innerClass">SECTION 101</div>
+          <div class="innerClass">Dr. Kathy Johnson</div> <div class="innerClass"></div>
+        </div></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
