@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="../../threadStyleSheet.css" rel="stylesheet">
+  <title>CS101 - Robert Smith</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../../threadJS.js"></script>
+</head>
+<body>
+  <iframe width="100%" height="70px" frameborder="0" src="../../header.html"></iframe>
+  <div class = "wrapper">
+    <div class = "leftWrapper">
+      <a href="../"><div class = "backButton">Back</div></a>
+    </div>
+    <div class = "rightWrapper">
+      <div class="topWrapper"><span style="font-size: 4vh;">CS101 - Robert Smith - Lesson 1</span></div>
+      <div class="indivWrapper">
+        <div class="question">
+          <div class="nameDiv"><span style="font-size: 2vh;">Loren Stephenson</span></div>
+          <span> What is the difference between "Var" and "Let"? </span>
+        </div>
+      </div>
+
+      <div class="indivWrapper">
+        <img src="../../../pics/img2.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp2" onclick="upvote(this);"></div>
+          <span>4</span>
+          <div class = "arrowDown" id="arrowDown2" onclick="downvote(this);"></div>
+        </div>
+        <div class="profFav">
+          <div class="nameDiv"<span style="font-size: 2vh;">John Carlson</span><div class="label">Professor Favorite</div></div></br>
+          <span> Var and Let are not much different. Var is the old way and let is the new way, but they both work. </span>
+        </div>
+      </div>
+
+      <div class="indivWrapper">
+        <img src="../../../pics/img1.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp3" onclick="upvote(this);"></div>
+          <span>6</span>
+          <div class = "arrowDown" id="arrowDown3" onclick="downvote(this);"></div>
+        </div>
+        <div class="response">
+          <div class="nameDiv"><span style="font-size: 2vh;">Loren Stephenson</span></div>
+          <span> Thank You! That Makes a lot of sense. </span>
+        </div>
+      </div>
+
+      <div class="indivWrapper">
+        <img src="../../../pics/img2.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp4" onclick="upvote(this);"></div>
+          <span>0</span>
+          <div class = "arrowDown" id="arrowDown4" onclick="downvote(this);"></div>
+        </div>
+        <div class="response" id ="questionDiv">
+          <div class="nameDiv"><span style="font-size: 2vh;">John Carlson</span></div>
+          <div class="nameDiv"><textarea id="newQ" rows="3" cols="100"></textarea></div>
+          <button id="newQButton" onclick="newQ();">Add Response</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

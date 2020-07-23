@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="../../threadStyleSheet.css" rel="stylesheet">
+  <title>Bio 203 - Kathy Johnson</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../../threadJS.js"></script>
+</head>
+<body>
+  <iframe width="100%" height="70px" frameborder="0" src="../../header.html"></iframe>
+  <div class = "wrapper">
+    <div class = "leftWrapper">
+      <a href="../"><div class = "backButton">Back</div></a>
+    </div>
+    <div class = "rightWrapper">
+      <div class="topWrapper"><span style="font-size: 4vh;">Bio 203 - Kathy Johnson - Scientific Method</span></div>
+      <div class="indivWrapper">
+        <div class="question">
+          <div class="nameDiv"><span style="font-size: 2vh;">Loren Stephenson</span></div>
+          <span> What is typically between background research and testing? </span>
+        </div>
+      </div>
+      <div class="indivWrapper">
+        <img src="../../../pics/img2.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp1" onclick="upvote(this);"></div>
+          <span>2</span>
+          <div class = "arrowDown" id="arrowDown1" onclick="downvote(this);"></div>
+        </div>
+        <div class="profFav">
+          <div class="nameDiv"><span style="font-size: 2vh;">John Carlson</span><div class="label">Professor Favorite</div></div>
+          <span> Between those steps, you must create a hypothesis. </span>
+        </div>
+      </div>
+
+
+      <div class="indivWrapper">
+        <img src="../../../pics/img2.jpg"></img>
+        <div class="arrows">
+          <div class = "arrowUp" id="arrowUp4" onclick="upvote(this);"></div>
+          <span>0</span>
+          <div class = "arrowDown" id="arrowDown4" onclick="downvote(this);"></div>
+        </div>
+        <div class="response" id ="questionDiv">
+          <div class="nameDiv"><span style="font-size: 2vh;">John Carlson</span></div>
+          <div class="nameDiv"><textarea id="newQ" rows="3" cols="100"></textarea></div>
+          <button id="newQButton" onclick="newQ();">Add Response</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
